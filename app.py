@@ -117,7 +117,7 @@ def stats_start_date(start_date, end_date ="no_end"):
    
     # Create our session (link) from Python to the DB
     session = Session(engine)
-    
+  
     #Get the max, min, avg temps for the date range
     sel = [func.max(measure.tobs).label('max_temp'), func.min(measure.tobs).label('min_temp'), func.avg(measure.tobs).label('avg_temp')]
     if end_date == "no_end":
